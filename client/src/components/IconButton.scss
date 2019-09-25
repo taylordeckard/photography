@@ -1,0 +1,25 @@
+.IconButton {
+	background: rgba(0,0,0,0);
+    border: none;
+	cursor: pointer;
+	border-radius: 40px;
+	transition: background 0.25s;
+	padding: 6px;
+	height: 32px;
+	width: 32px;
+
+	img {
+		height: 20px;
+		width: 20px;
+		filter: var(--iconColor);
+	}
+
+	&:focus { outline:0; }
+	&:hover {
+		opacity: 0.9;
+		background: rgba(0,0,0,0.25);
+	}
+	&:active {
+		background: rgba(0,0,0,0.40);
+	}
+}

@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+    # database: 
+    #     build: 
+    #         context: ./database
+    #         dockerfile: ./.docker/dev.dockerfile
+    #     dns: 
+    #         - 127.0.0.1
+    #     volumes: 
+    #         - ./database/data:/data
+    #     ports:
+    #         - "7474:7474"
+    #         - "7687:7687"
+    server: 
+        build: 
+            context: ./server
+            dockerfile: ./.docker/dev.dockerfile
+        ports:
+            - "3000:3000"
+        volumes: 
+            - ./server:/usr/src/app

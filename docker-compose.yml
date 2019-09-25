@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    database: 
+        build: 
+            context: ./database
+            dockerfile: ./Dockerfile
+        dns: 
+            - 127.0.0.1
+        network_mode: "bridge"
+        volumes: 
+            - ./database/data:/data
+        ports:
+            - "7474:7474"
+            - "7687:7687"

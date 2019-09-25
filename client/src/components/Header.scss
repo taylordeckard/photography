@@ -1,0 +1,10 @@
+@import '../styles';
+
+.Header {
+	padding: 10px 10px 15px 10px;
+    border-bottom: 1px solid var(--iconColorHex);
+    margin: 0 10px 0 10px;
+	h1 {
+		line-height: 36px;
+	}
+}

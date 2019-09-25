@@ -1,0 +1,38 @@
+$color1: rgba(15, 82, 87, 1);
+$alt-background-color: #d2d2d2;
+$color4: rgba(46, 80, 119, 1);
+
+.dark-theme, .light-theme {
+  height: 100vh;
+}
+
+.dark-theme {
+	--backgroundColor: rgba(68, 68, 68, 1);
+	--textColor: rgba(77, 161, 169, 1);
+	--mutedTextColor: desaturate(rgba(77, 161, 169, 1), 15%);
+	--iconColor: invert(87%)
+			sepia(0%)
+			saturate(84%)
+			hue-rotate(228deg)
+			brightness(98%)
+			contrast(96%);
+	--iconColorHex: #d6d6d6;
+	background: var(--backgroundColor);
+	color: var(--textColor);
+}
+
+.light-theme {
+	--backgroundColor: #ececec;
+	--textColor: #1b1b1b;
+	--mutedTextColor: desaturate(#1b1b1b, 15%);
+	--iconColor: invert(49%)
+		sepia(38%)
+		saturate(6%)
+		hue-rotate(314deg)
+		brightness(90%)
+		contrast(92%);
+	--iconColorHex: #7b7a7a;
+	background: var(--backgroundColor);
+	color: var(--textColor);
+}
+

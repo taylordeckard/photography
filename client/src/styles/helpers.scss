@@ -1,0 +1,56 @@
+@import './themes';
+
+.text {
+	&--muted {
+		color: var(--mutedTextColor);
+	}
+}
+
+.flex {
+    display: flex;
+}
+.flex-inline {
+    display: inline-flex;
+}
+.flex-left,
+.flex-align-start {
+    justify-content: flex-start;
+}
+.flex-center,
+.flex-center-horizontal {
+    justify-content: center;
+}
+.flex-right,
+.flex-align-end {
+    justify-content: flex-end;
+	margin-left: auto;
+}
+.flex-around {
+    justify-content: space-around;
+}
+.flex-between {
+    justify-content: space-between;
+}
+.flex-top {
+    align-items: flex-start;
+}
+.flex-middle,
+.flex-center-vertical {
+    display: flex;
+    align-items: center;
+}
+.flex-bottom {
+    align-items: flex-end;
+}
+.flex-stretch {
+    align-items: stretch;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
