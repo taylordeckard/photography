@@ -1,0 +1,1 @@
+export { IAppRoute } from './interfaces';

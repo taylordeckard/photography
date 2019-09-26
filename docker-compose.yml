@@ -4,8 +4,6 @@ services:
         build: 
             context: ./database
             dockerfile: ./Dockerfile
-        dns: 
-            - 127.0.0.1
         network_mode: "bridge"
         volumes: 
             - ./database/data:/data

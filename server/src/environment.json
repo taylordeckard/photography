@@ -1,5 +1,7 @@
 {
 	"db": {
-		"password": "ARTHECHAFTHINCHAYEADEMBADIO"
+		"password": "ARTHECHAFTHINCHAYEADEMBADIO",
+		"uri": "bolt://database:7687",
+		"user": "neo4j"
 	}
 }

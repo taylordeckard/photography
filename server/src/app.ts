@@ -1,4 +1,6 @@
+import { buildRoutes } from '@app/build-routes';
 import { constants } from '@app/constants';
+import { appRoutes } from '@app/routes';
 import { Logger } from '@app/utils';
 import Koa, { Context } from 'koa';
 import bodyParser from 'koa-bodyparser';
@@ -25,9 +27,7 @@ app.on('error', error => {
 
 const router = new Router();
 
-router.get('/', (ctx: Context) => {
-	ctx.body = 'Hello World';
-});
+buildRoutes(router, appRoutes);
 
 app.use(router.routes());
 
