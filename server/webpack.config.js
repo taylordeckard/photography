@@ -37,6 +37,7 @@ module.exports = {
 		extensions: ['.ts'],
 		alias: {
 			'@app': path.resolve(__dirname, 'src'),
+			'@global-types': path.resolve(__dirname, '../types'),
 		},
 	},
 	output: {

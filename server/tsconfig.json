@@ -17,7 +17,8 @@
 			"*": [
 				"node_modules/*"
 			],
-			"@app/*": ["src/*"]
+			"@app/*": ["src/*"],
+			"@global-types/*": ["../types/*"]
 		},
 		"lib": [
 			"dom",

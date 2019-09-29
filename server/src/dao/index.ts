@@ -1,1 +1,1 @@
-export { CollectionSetDAO } from './collection-set.dao';
+export { CollectionsDAO } from './collection.dao';

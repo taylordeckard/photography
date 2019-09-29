@@ -1,3 +1,4 @@
+import { CollectionsDAO } from '@app/dao';
 import { Context } from 'koa';
 import { IAppRoute } from '../types';
 
@@ -10,8 +11,8 @@ export const collectionRoutes: IAppRoute[] = [
 		path: '/collection',
 	},
 	{
-		handler: (ctx: Context) => {
-			ctx.body = { commonName: 'Bald Eagle', scientificName: 'haliaeetus leucocephalus' };
+		handler: async (ctx: Context) => {
+			ctx.body = await CollectionsDAO.getCollections();
 		},
 		method: 'get',
 		path: '/collection',
