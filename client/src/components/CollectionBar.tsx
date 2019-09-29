@@ -3,10 +3,11 @@ import './CollectionBar.scss';
 import CollectionRow from './CollectionRow';
 import WidthHandle from './WidthHandle';
 import { CollectionAPI } from '../api';
-import { CollectionType } from '../types';
+import { Collection } from '../types';
 
 const CollectionBar: React.FC = () => {
 	const [width, setWidth] = useState(300);
+	const [collections, setCollections] = useState<Collection[]>([]);
 	const widthRef = useRef<number>(width);
 
 	const updateWidth = (delta: number) => {
@@ -19,21 +20,20 @@ const CollectionBar: React.FC = () => {
 
 	const getCollections = async () => {
 		const collections = await CollectionAPI.getCollections();
-		console.log(collections);
+		setCollections(collections);
 	};
 
-	getCollections();
+	useEffect(() => {
+		getCollections();
+	}, []);
+
 
 	return (
 		<div
 			className="CollectionBar"
 			style={{ width: `${width}px` }}
 		>
-			<CollectionRow
-				label="Wildlife"
-				type={CollectionType.COLLECTION}
-				uuid="1"
-			/>
+			{collections.map(coll => <CollectionRow key={coll.uuid}  collection={coll}/>)}
 			<WidthHandle updateWidth={updateWidth}/>
 		</div>
 	);

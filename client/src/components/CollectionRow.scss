@@ -5,9 +5,10 @@
 	padding: 10px;
 	margin: 0px 10px 0 10px;
 	transition: color 0.2s;
+	color: var(--sidebarTextColor);
 
 	&:hover, &.active {
-		color: var(--iconColorHex);
+		color: var(--sidebarActiveTextColor);
 		cursor: pointer;
 	}
 

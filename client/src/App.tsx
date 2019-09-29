@@ -8,8 +8,11 @@ loadSVGs();
 const themeLoader = new ThemeLoader();
 
 const App: React.FC = () => {
+	/**
+	 * THEME CONTEXT
+	 */
 	const themeRef = useRef<ThemeContextInterface>();
-	let toggleTheme = () => {
+	const toggleTheme = () => {
 		if (themeRef.current) {
 			const newTheme = themeRef.current.theme === 'dark' ? 'light' : 'dark';
 			themeLoader.theme = newTheme;

@@ -6,7 +6,8 @@ interface CaretProps {
 }
 
 const Caret: React.FC<CaretProps> = (props) => {
-	const toggleExpand = (expanded: boolean) => {
+	const toggleExpand = (event: React.MouseEvent, expanded: boolean) => {
+		event.stopPropagation();
 		props.setExpanded(expanded);
 	}
 
@@ -15,8 +16,9 @@ const Caret: React.FC<CaretProps> = (props) => {
 			<img
 				className="flex-align-end"
 				src="icons/caret-up.svg"
-				alt="Click to Collapse"
-				onClick={() => toggleExpand(false)}
+				alt="Hide Contents"
+				title="Hide Contents"
+				onClick={(event) => toggleExpand(event, false)}
 			/>
 		);
 	}
@@ -25,8 +27,9 @@ const Caret: React.FC<CaretProps> = (props) => {
 		<img
 			className="flex-align-end"
 			src="icons/caret-down.svg"
-			alt="Click to Expand"
-			onClick={() => toggleExpand(true)}
+			alt="Show Contents"
+			title="Show Contents"
+			onClick={(event) => toggleExpand(event, true)}
 		/>
 	);
 }
