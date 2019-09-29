@@ -1,0 +1,7 @@
+.CollectionBar {
+	@media screen and (min-width: 600px) {
+		position: fixed;
+		width: 300px;
+		height: calc(100vh - 80px);
+	}
+}

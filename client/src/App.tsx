@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
+import CollectionBar from './components/CollectionBar';
 import ThemeContext, { ThemeContextInterface } from './ThemeContext';
 import { loadSVGs, ThemeLoader } from './utils';
 
@@ -37,7 +38,8 @@ const App: React.FC = () => {
 	return (
 		<ThemeContext.Provider value={theme}>
 			<div className={getAppTheme()}>
-				<Header />
+				<Header/>
+				<CollectionBar/>
 			</div>
 		</ThemeContext.Provider>
 	);

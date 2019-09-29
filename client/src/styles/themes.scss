@@ -17,6 +17,7 @@ $color4: rgba(46, 80, 119, 1);
 			brightness(98%)
 			contrast(96%);
 	--iconColorHex: #d6d6d6;
+	--sidebarBorderColor: #8a8a8a;
 	background: var(--backgroundColor);
 	color: var(--textColor);
 }
@@ -32,6 +33,7 @@ $color4: rgba(46, 80, 119, 1);
 		brightness(90%)
 		contrast(92%);
 	--iconColorHex: #7b7a7a;
+	--sidebarBorderColor: #d0d0d0;
 	background: var(--backgroundColor);
 	color: var(--textColor);
 }
