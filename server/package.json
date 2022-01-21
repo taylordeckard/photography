@@ -39,7 +39,7 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "lodash-es": "^4.17.15",
-    "log4js": "^5.1.0",
+    "log4js": "^6.4.0",
     "neo4j-driver": "^1.7.6",
     "uuid": "^3.3.3"
   }
